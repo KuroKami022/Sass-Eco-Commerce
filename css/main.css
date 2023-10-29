@@ -27,16 +27,67 @@ nav .icons button {
 }
 
 main article {
+  padding-top: 70px;
   justify-content: space-between;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 45px;
+  padding-right: 45px;
   width: auto;
   display: flex;
   color: #7C6A0A;
 }
+main article .impact-section {
+  flex-direction: column;
+  display: flex;
+  padding-top: 50px;
+  gap: 25px;
+}
+main article h1 {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+main article p {
+  font-size: 1.5em;
+}
+main article button {
+  padding: 20px;
+  width: 12vw;
+  background-color: #FA9500;
+  border-style: none;
+  border-radius: 35px;
+  color: white;
+  font-size: 1em;
+}
 main article img {
   width: 25vw;
   border-radius: 19px;
+}
+main section {
+  width: 100%;
+  height: auto;
+  padding: 60px;
+}
+main section h2 {
+  color: #7C6A0A;
+  font-size: 2em;
+}
+main section .healthcare h2 {
+  font-weight: 300;
+  padding-bottom: 60px;
+}
+main section .healthcare .product-card {
+  border-radius: 8px;
+  padding: 20px;
+  color: #7C6A0A;
+  width: 14vw;
+  height: auto;
+  background-color: #FFDAC6;
+}
+main section .healthcare .product-card img {
+  border-radius: 6px;
+  width: 200px;
+  height: 250px;
+  background-image: cover;
 }
 
 footer {
