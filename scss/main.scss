@@ -77,72 +77,100 @@ main {
             border-radius: 19px;
         }
     }
-section{
-    width: auto;
-    height: auto;
-    padding: 60px;
-    h2{
-        color: $primary-text-color;
-        font-size: 2em;
-    }
-    .healthcare{
-        padding-bottom: 60px;
+    section{
+        width: auto;
+        height: auto;
+        padding: 60px;
         h2{
-            font-weight: 300;
-            padding-bottom: 60px;
-        }
-        .card-section{
-            flex-wrap: wrap;
-            @include flexCenter(row,space-evenly,center);
-            width: auto;
-            height: auto;
-            column-gap: 200px;
-            row-gap: 80px;
-        }
-        .product-card{
-            border-radius: 8px;
-            padding: 20px;
             color: $primary-text-color;
-            width: 14vw;
-            height: 50vh;
-            background-color: $secondary-color;
-            .icon{
-                width: 100%;
-                height: auto;
-                display: flex;
-                justify-content: flex-end;
-                padding-bottom: 12px;
-                svg{
-                    width: 28px;
-                    height: 28px;
-                    stroke: #7C6A0A;
-                    stroke-width: 2;
-                }
+            font-size: 2em;
+        }
+        .healthcare{
+            padding-bottom: 60px;
+            h2{
+                font-weight: 300;
+                padding-bottom: 60px;
             }
-            .product-image{
-                width: 100%;
+            .card-section{
+                flex-wrap: wrap;
+                @include flexCenter(row,space-evenly,center);
+                width: auto;
                 height: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                img{
-                    border-radius: 6px;
-                    width: 12vw;
-                    height: 30vh;
-                    object-fit: cover;
+                column-gap: 200px;
+                row-gap: 80px;
+            }
+            .product-card{
+                border-radius: 8px;
+                padding: 20px;
+                color: $primary-text-color;
+                width: 14vw;
+                height: 65vh;
+                background-color: $secondary-color;
+                .icon{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-bottom: 12px;
+                    svg{
+                        width: 28px;
+                        height: 28px;
+                        stroke: #7C6A0A;
+                        stroke-width: 2;
+                    }
+                }
+                .product-image{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        border-radius: 6px;
+                        width: 12vw;
+                        height: 30vh;
+                        object-fit: cover;
+                    }
                 }
             }
         }
-    }
-    .furniture{
-        @extend .healthcare;
-        .product-card{
-            background-color: $tertiary-color;
-            color: white;
+        .furniture{
+            @extend .healthcare;
+            .product-card{
+                background-color: $tertiary-color;
+                color: white;
+            }
         }
     }
 }
+
+.about-us{
+    h2{
+        padding-bottom: 60px;
+        font-weight: bold;
+    }
+    .mission-section{
+        padding-bottom: 180px;
+        @include flexCenter(row,space-around,center);
+        .earth{
+            color: #E86424;
+            gap: 40px;
+            width: 30vw;
+            display: flex;
+            img{
+                object-fit: contain;
+            }
+            p{
+                text-align: center;
+                font-size: $paragraph-size;
+            }
+        }
+        .innovation{
+            @extend .earth
+        }
+    }
 }
+
 footer {
     background-color: $quaternary-color ;
     width: 100%;

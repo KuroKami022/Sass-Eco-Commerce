@@ -103,7 +103,7 @@ main section .healthcare .product-card, main section .furniture .product-card {
   padding: 20px;
   color: #7C6A0A;
   width: 14vw;
-  height: 50vh;
+  height: 65vh;
   background-color: #FFDAC6;
 }
 main section .healthcare .product-card .icon, main section .furniture .product-card .icon {
@@ -138,6 +138,31 @@ main section .furniture .product-card {
   color: white;
 }
 
+.about-us h2 {
+  padding-bottom: 60px;
+  font-weight: bold;
+}
+.about-us .mission-section {
+  padding-bottom: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-us .mission-section .earth, .about-us .mission-section .innovation {
+  color: #E86424;
+  gap: 40px;
+  width: 30vw;
+  display: flex;
+}
+.about-us .mission-section .earth img, .about-us .mission-section .innovation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about-us .mission-section .earth p, .about-us .mission-section .innovation p {
+  text-align: center;
+  font-size: 1.5em;
+}
 footer {
   background-color: #FA9500;
   width: 100%;
