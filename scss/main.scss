@@ -1,10 +1,23 @@
 $primary-color:#FFEFE7;
-$secundary-color:#FFDAC6;
+$secondary-color:#FFDAC6;
 $tertiary-color:#BABD8D;
 $primary-text-color:#7C6A0A;
-$quaternium-color: #FA9500;
+$quaternary-color: #FA9500;
 $font-stack: 'IBM Plex Sans' , sans-serif;
 $paragraph-size: 1.5em;
+
+@mixin flexCenter($direction,$content,$align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+@mixin buttonStyle{
+    button{
+        background: none;
+        border-style: none;
+    }
+}
 
 body {
     margin: 0px;
@@ -14,10 +27,9 @@ body {
 }
 
 nav {
+    @include flexCenter(row,space-between,center);
     width: 100%;
     height: 100px;
-    display: flex;
-    justify-content: space-between;
     color: $primary-text-color;
     p{
         font-size: $paragraph-size;
@@ -26,26 +38,20 @@ nav {
     .icons {
         display: flex;
         gap: 15px;
-        button {
-            background: none;
-            border-style: none;
-            padding-right: 30px;
-        }
+        @include buttonStyle;
     }
 }
 
 main {
     article{
         padding-top: 70px;
-        justify-content: space-between;
+        @include flexCenter(row,space-between,center);
         padding-left: 45px;
         padding-right: 45px;
         width: auto;
-        display: flex;
         color: $primary-text-color;
         .impact-section{
-            flex-direction: column;
-            display: flex;
+            @include flexCenter(column,space-evenly,flex-start);
             padding-top: 50px;
             gap: 25px;
         }
@@ -57,11 +63,11 @@ main {
         p{
             font-size: $paragraph-size;
         }
+        @include buttonStyle;
         button{
             padding: 20px;
             width: 12vw;
-            background-color: $quaternium-color;
-            border-style: none;
+            background-color: $quaternary-color;
             border-radius: 35px;
             color: white;
             font-size: 1em;
@@ -72,7 +78,7 @@ main {
         }
     }
 section{
-    width: 100%;
+    width: auto;
     height: auto;
     padding: 60px;
     h2{
@@ -80,34 +86,65 @@ section{
         font-size: 2em;
     }
     .healthcare{
+        padding-bottom: 60px;
         h2{
             font-weight: 300;
             padding-bottom: 60px;
+        }
+        .card-section{
+            flex-wrap: wrap;
+            @include flexCenter(row,space-evenly,center);
+            width: auto;
+            height: auto;
+            column-gap: 200px;
+            row-gap: 80px;
         }
         .product-card{
             border-radius: 8px;
             padding: 20px;
             color: $primary-text-color;
             width: 14vw;
-            height: auto;
-            background-color: $secundary-color;
-            .product-image{
+            height: 50vh;
+            background-color: $secondary-color;
+            .icon{
                 width: 100%;
-                height: 100%;
+                height: auto;
                 display: flex;
-                img{
-                    border-radius: 6px;
-                    width: 200px;
-                    height: 250px;
-                    background-image: cover;
+                justify-content: flex-end;
+                padding-bottom: 12px;
+                svg{
+                    width: 28px;
+                    height: 28px;
+                    stroke: #7C6A0A;
+                    stroke-width: 2;
                 }
             }
+            .product-image{
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    border-radius: 6px;
+                    width: 12vw;
+                    height: 30vh;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .furniture{
+        @extend .healthcare;
+        .product-card{
+            background-color: $tertiary-color;
+            color: white;
         }
     }
 }
 }
 footer {
-    background-color: $quaternium-color ;
+    background-color: $quaternary-color ;
     width: 100%;
     height: 250px;
 }
